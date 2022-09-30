@@ -1,0 +1,11 @@
+saleTax= 1.0825
+BillInput1= float(input("What is your bill? "))
+print("Amount witout tip:")
+print(saleTax*BillInput1)
+TipInput1= float(input("Tip percentage? "))
+Tip= (TipInput1/100)
+print(" ")
+print("Total Amount Payed")
+print((saleTax*BillInput1)+(Tip*BillInput1))
+print(" ")
+print("Thank You for your patronage")
