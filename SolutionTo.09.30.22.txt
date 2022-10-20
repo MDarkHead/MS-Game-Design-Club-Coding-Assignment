@@ -1,0 +1,31 @@
+
+# Part 1:
+
+pvalue= int(input("Enter a positive Integer: "))
+
+if pvalue%2==0 and pvalue%3==0:
+	print("Your value is divisible by 2 and 3")
+elif pvalue%2==0:
+	print("Your value is divisible by 2, but not 3")
+elif pvalue%3==0:
+	print("Your value is divisible by 3, but not 2")
+else:
+	print("Your value is not divisible by 2 or 3")
+	
+
+#--------------------------------------------------
+
+# Part 2: 
+
+userinp= int(input("Enter an Integer: "))
+
+if userinp%3==0 and userinp%4==0:
+	print("Your number is divisble by both 3 and 4.")
+	print("Your number times 100 is: " + str(userinp*100))
+elif userinp%3==0 or userinp%4==0:
+	print("Your number is divisible by 3 or 4, but not both.")
+	print("Your number times 10 is: " + str(userinp*10))
+elif userinp%3!=0 and userinp%4!=0:
+	print("Your number is not divisible by 3 or 4.")
+	print("Your number squared is: " + str(userinp**2))
+	
