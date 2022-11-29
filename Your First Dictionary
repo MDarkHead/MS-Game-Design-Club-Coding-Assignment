@@ -1,0 +1,2 @@
+a_dictionary= {'pig':4, 'spider':8, 'bird':2, 'armadillo': 4, 'gorilla':4 }
+print("The amount of legs the spider has is " + str(a_dictionary['bird']))
