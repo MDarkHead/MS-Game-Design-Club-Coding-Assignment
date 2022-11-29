@@ -1,0 +1,41 @@
+# 1. 
+# Write a python code to sum all multiples of 5 or 7, but not both
+# for number less than or equal to 10,000.
+# The first few numbers would be: 
+# 5+7+10+14+15+20+21+25+28+30+40+42+... 
+# Note that I skipped 35 since it divisible by both 5 and 7
+
+# 2. 
+# Output (print) the value of the sum and the number of values that were
+# multiples of both 5 and 7.
+# For example: given the numbers above through 42, your output should look like:
+# The sum is 257 and 1 numbers were divisible by both 5 and 7
+
+# 3.
+# If you are in a group, you must have a comment at the top with all your names
+# You must also use meaningful names for variables
+
+
+# 4. 
+# If you finish this early you can help others, watch the following videos, or just relax
+# https://youtu.be/zZwzrlLc_oc
+# https://youtu.be/QJQ691PTKsA
+# https://youtu.be/-5wpm-gesOY
+
+
+x=1
+five=5
+seven=7
+multiplier=1
+
+while x<=10000:
+	five*=multiplier
+	seven*=multiplier
+	y= five+seven
+	print(" " +str(five) + "+" + str(seven) + ": ")
+	print("Sum is: " + str(y))
+	multiplier += 1
+	five=5
+	seven=7
+	x+=1
+	
