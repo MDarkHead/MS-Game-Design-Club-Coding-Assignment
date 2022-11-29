@@ -1,0 +1,21 @@
+from numpy import random
+
+correctnum= random.randint(10)
+#correctnum= 7
+print("Welcome to my Guessing Game!")
+win= False
+#print(correctnum)
+while win is False:
+	userinput= int(input("Enter a number between 1 and 10: "))
+	if userinput<=0 or userinput>=11:
+		print("Invalid Number")
+	if userinput!= correctnum:
+		if userinput>=correctnum:
+			print("Your number is greater than the correct number")
+		elif userinput<=correctnum:
+			print("Your number is less than the correct number")
+	elif userinput==correctnum:
+		print(" ")
+		print("Correct, you win")
+		print(" ")
+		win= True
