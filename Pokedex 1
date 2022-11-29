@@ -1,0 +1,296 @@
+Blaz={'Hp':80,'Atk':120,'Def':70,'Sp.Atk':110,'Sp.Def':70,'Spd':80}
+Dark={'Hp':70,'Atk':90,'Def':90,'Sp.Atk':135,'Sp.Def':90,'Spd':125}
+Woop={'Hp':55,'Atk':45,'Def':45,'Sp.Atk':25,'Sp.Def':25,'Spd':15}
+Vapor={'Hp':130,'Atk':65,'Def':60,'Sp.Atk':110,'Sp.Def':95,'Spd':65}
+Snomm={'Hp':30,'Atk':25,'Def':35,'Sp.Atk':45,'Sp.Def':30,'Spd':20}
+Garde={'Hp':68,'Atk':65,'Def':65,'Sp.Atk':125,'Sp.Def':115,'Spd':80}
+
+Bag={'Blaziken':Blaz, 'Darkrai':Dark, 'Wooper':Woop, 'Vaporeon':Vapor, 'Snom':Snomm, 'Gardevoir':Garde}
+#print(Bag['Slot1'])
+
+print("Base Stats for Blaziken: " + str(Bag['Blaziken']))
+print("Base Stats for Darkrai: " + str(Bag['Darkrai']))
+print("Base Stats for Wooper: " + str(Bag['Wooper']))
+print("Base Stats for Vaporeon: " + str(Bag['Vaporeon']))
+print("Base Stats for Snom: " + str(Bag['Snom']))
+print("Base Stats for Gardevoir: " + str(Bag['Gardevoir']))
+print(" ")
+
+blazsum=0
+darksum=0
+woopsum=0
+vaporsum=0
+snomsum=0
+gardsum=0
+
+blazsum+=Blaz['Hp']+Blaz['Atk']+Blaz['Def']+Blaz['Sp.Atk']+Blaz['Sp.Def']+Blaz['Spd']
+darksum+=Dark['Hp']+Dark['Atk']+Dark['Def']+Dark['Sp.Atk']+Dark['Sp.Def']+Dark['Spd']
+woopsum+=Woop['Hp']+Woop['Atk']+Woop['Def']+Woop['Sp.Atk']+Woop['Sp.Def']+Woop['Spd']
+vaporsum+=Vapor['Hp']+Vapor['Atk']+Vapor['Def']+Vapor['Sp.Atk']+Vapor['Sp.Def']+Vapor['Spd']
+snomsum+=Snomm['Hp']+Snomm['Atk']+Snomm['Def']+Snomm['Sp.Atk']+Snomm['Sp.Def']+Snomm['Spd']
+gardsum+=Garde['Hp']+Garde['Atk']+Garde['Def']+Garde['Sp.Atk']+Garde['Sp.Def']+Garde['Spd']
+
+#blazsum 530
+#darksum 600
+#woopsum 210
+#vaporsum 525
+#snomsum 185
+#gardsum 518
+
+testvar=1
+while testvar==1:
+    if blazsum > darksum:
+        if blazsum > woopsum:
+            if blazsum > vaporsum:
+                if blazsum > snomsum:
+                    if blazsum > gardsum:
+                        print("Blaziken has the largest sum of stat values ")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsun > gardsum:
+                        print("Snom has the larges sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+            else:
+                if vaporsum > snomsum:
+                    if vaporsum > gardsum:
+                        print("Vaporeon has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum:
+                         print("Snom has the largest sum of stat values")
+                         testvar = 2
+                    else: 
+                       print("Gardevoir has the largest sum of stat values")
+                       testvar = 2
+        else: 
+            if woopsum > vaporsum: 
+                if woopsum > snomsum:
+                    if woopsum > gardsum:
+                        print("Wooper has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum: 
+                        print("Snom has the largest sum of stat values")
+                        testvar = 2
+                    else: 
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+            else:
+                if vaporsum > snomsum:
+                    if vaporsum > gardsum:
+                        print("Vaporeon has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum:
+                         print("Snom has the largest sum of stat values")
+                         testvar = 2
+                    else: 
+                       print("Gardevoir has the largest sum of stat values")
+                       testvar = 2
+    else:
+        if darksum > woopsum:
+            if darksum > vaporsum:
+                if darksum > snomsum:
+                    if darksum > gardsum:
+                        print("Darkrai has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum:
+                        print("Snom has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+            else:
+                if vaporsum > snomsum:
+                    if vaporsum > gardsum:
+                        print("Vaporeon has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum:
+                         print("Snom has the largest sum of stat values")
+                         testvar = 2
+                    else: 
+                       print("Gardevoir has the largest sum of stat values")
+                       testvar = 2
+        else:
+            if woopsum > vaporsum: 
+                if woopsum > snomsum:
+                    if woopsum > gardsum:
+                        print("Wooper has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum: 
+                        print("Snom has the largest sum of stat values")
+                        testvar = 2
+                    else: 
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+            else:
+                if vaporsum > snomsum:
+                    if vaporsum > gardsum:
+                        print("Vaporeon has the largest sum of stat values")
+                        testvar = 2
+                    else:
+                        print("Gardevoir has the largest sum of stat values")
+                        testvar = 2
+                else:
+                    if snomsum > gardsum:
+                         print("Snom has the largest sum of stat values")
+                         testvar = 2
+                    else: 
+                       print("Gardevoir has the largest sum of stat values")
+                       testvar = 2
+#------------------------------------------------------------------------------
+testvar2=1
+while testvar2==1:
+    if blazsum < darksum:
+        if blazsum < woopsum:
+            if blazsum < vaporsum:
+                if blazsum < snomsum:
+                    if blazsum < gardsum:
+                        print("Blaziken has the smallest sum of stat values ")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsun < gardsum:
+                        print("Snom has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+            else:
+                if vaporsum < snomsum:
+                    if vaporsum < gardsum:
+                        print("Vaporeon has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum:
+                         print("Snom has the smallest sum of stat values")
+                         testvar2 = 2
+                    else: 
+                       print("Gardevoir has the smallest sum of stat values")
+                       testvar2 = 2
+        else: 
+            if woopsum < vaporsum: 
+                if woopsum < snomsum:
+                    if woopsum < gardsum:
+                        print("Wooper has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum: 
+                        print("Snom has the smallest sum of stat values")
+                        testvar2 = 2
+                    else: 
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+            else:
+                if vaporsum < snomsum:
+                    if vaporsum < gardsum:
+                        print("Vaporeon has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum:
+                         print("Snom has the smallest sum of stat values")
+                         testvar2 = 2
+                    else: 
+                       print("Gardevoir has the smallest sum of stat values")
+                       testvar2 = 2
+    else:
+        if darksum < woopsum:
+            if darksum < vaporsum:
+                if darksum < snomsum:
+                    if darksum < gardsum:
+                        print("Darkrai has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum:
+                        print("Snom has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+            else:
+                if vaporsum < snomsum:
+                    if vaporsum < gardsum:
+                        print("Vaporeon has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum:
+                         print("Snom has the smallest sum of stat values")
+                         testvar2 = 2
+                    else: 
+                       print("Gardevoir has the smallest sum of stat values")
+                       testvar2 = 2
+        else:
+            if woopsum < vaporsum: 
+                if woopsum < snomsum:
+                    if woopsum < gardsum:
+                        print("Wooper has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum: 
+                        print("Snom has the smallest sum of stat values")
+                        testvar2 = 2
+                    else: 
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+            else:
+                if vaporsum < snomsum:
+                    if vaporsum < gardsum:
+                        print("Vaporeon has the smallest sum of stat values")
+                        testvar2 = 2
+                    else:
+                        print("Gardevoir has the smallest sum of stat values")
+                        testvar2 = 2
+                else:
+                    if snomsum < gardsum:
+                         print("Snom has the smallest sum of stat values")
+                         testvar2 = 2
+                    else: 
+                       print("Gardevoir has the smallest sum of stat values")
+                       testvar2 = 2
