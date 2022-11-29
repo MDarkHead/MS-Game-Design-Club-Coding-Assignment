@@ -1,0 +1,52 @@
+#Pi Monte Carlo Assignment
+from numpy import random
+
+def rngfunction():
+    x=random.rand()
+    y=random.rand()
+    listt=[x,y]
+    return listt
+    
+def checkfunction():
+    listt = rngfunction()
+    x1=listt[0]
+    y1=listt[1]
+    checknum=(x1**2)+(y1**2)
+    inside=0
+    if checknum<=1:
+        inside+=1
+    else:
+        inside+=0
+    return inside
+
+def fourfunction():
+    fourvalue=(4*(inside2/N))
+    return fourvalue
+#=======================================
+#=======================================
+x=0
+y=0
+c=1
+N=0
+listt=[x,y]
+inside2=0
+a=0
+z=1
+while c<1048576000:
+    rngfunction()
+    while N!=1048576000:
+        checkfunction()
+        N+=1
+        inside2+=checkfunction()
+        #print(rngfunction())
+        if N==z:
+            z+=2**a
+            a+=1
+            print("When the point is " +str(z) + str(", pi is ") +str(fourfunction()))
+    c+=1
+    dictionary={a:fourfunction()}
+print(" ")
+print("A total of " +str(inside2) + str(" coordinate pairs are inside the circle out of " +str(N)) +str(" points"))
+fourfunction()
+print("pi is approximately " +str(fourfunction()))
+print(dictionary)
