@@ -1,0 +1,57 @@
+# Assignment for Dec 2, 2022
+# Statistics Functions
+# 1. Create a list holding 10 floats
+# 2. Create a function called getMean that takes one list as a parameter and returns the
+# average of your list
+# 3. Create a function called getPopStdDev that takes two parameters a float and a list,
+# where the float will be the average you found. This function should return the population
+# standard deviation of the list
+# 4. Create a function called getSampleStdDev that takes two parameters, a float and a list,
+# where the float will be the average you found. This function should return the sample
+# deviation of the list. 
+# 5. You must use loops to complete this. Do not do something like this:
+# myList[0]+myList[1]+...+myList[9]
+# 6. Your code must work for any list, not just yours so don't cheat by doing the math
+# yourself and printing that answer
+
+# Note: look up the formula for sample standard deviation and population standard deviation
+# before you start. I recommend watching this video
+# https://youtu.be/Uk98hiMQgN0
+
+#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#-----#
+
+# Solution below (Don't look unless you are finished)
+
+def getMean(List):
+	Listt=0
+	for num in List:
+		Listt += (num)/len(List)
+	print("Mean: " + str(Listt))
+
+def getPopStdDev(PSD):
+	PopNum=0
+	topPopnum=0
+	for num in PSD:
+		PopNum += (num)
+		Popmean = PopNum/len(PSD)
+	for num in PSD:
+		topPopnum+=(num-Popmean)**2
+	PopnumSD=pow((topPopnum/len(PSD)), .5)
+	print("Population Standard Deviation: " + str(PopnumSD))
+	
+def getSamStdDev(SSD):
+	SamNum=0
+	topSamnum=0
+	Samleng= len(SSD)-1
+	for num in SSD:
+		SamNum += num
+		Sammean = SamNum/len(SSD)
+	for num in SSD: 
+		topSamnum+=(num-Sammean)**2
+	SamnumSD=pow((topSamnum/Samleng), .5)
+	print("Sample Standard Deviation: " + str(SamnumSD))
+
+mylist=[10.3,23.2,19.5,15,22.4,68.8,70.9,4.2,5.4,10]
+getMean(mylist)
+getPopStdDev(mylist)
+getSamStdDev(mylist)
