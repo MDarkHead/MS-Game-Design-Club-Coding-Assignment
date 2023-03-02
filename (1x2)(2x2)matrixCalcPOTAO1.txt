@@ -1,0 +1,34 @@
+list=[0]
+list.remove(0)
+Encrypt=input("Encrypt or Decrypt: ")
+if Encrypt==('Encrypt'):
+  a= float(input("enter encryption matrix (2x2) a: "))
+  b= float(input("enter encryption matrix (2x2) b: "))
+  c= float(input("enter encryption matrix (2x2) c: "))
+  d= float(input("enter encryption matrix (2x2) d: "))
+  potato=int(input("How many (1x2) matrixes do you have? "))
+  while potato>(0):
+      x= float(input("enter (1x2) matrix x: "))
+      y= float(input("enter (1x2) matrix y: "))
+      matrix=x*a+y*c
+      amatrix=x*b+y*d
+      list.append(matrix)
+      list.append(amatrix)
+      potato-=1
+  print(list)
+elif Encrypt==('Decrypt'):
+  a= float(input("enter encryption matrix (2x2) a: "))
+  b= float(input("enter encryption matrix (2x2) b: "))
+  c= float(input("enter encryption matrix (2x2) c: "))
+  d= float(input("enter encryption matrix (2x2) d: "))
+  potato=int(input("How many (1x2) matrixes do you have? "))
+  deter=a*d-b*c
+  while potato>(0):
+    x= float(input("enter (1x2) matrix x: "))
+    y= float(input("enter (1x2) matrix y: "))
+    matrix=x*d/deter+y*(-c)/deter
+    amatrix=x*(-b)/deter+y*a/deter
+    list.append(matrix)
+    list.append(amatrix)
+    potato-=1
+  print(list)  
