@@ -1,0 +1,80 @@
+"""
+The purpose of this project is to look at properties of prime numbers in Python. Prime numbers play
+a central role in cyber security and learning properties of primes can be extremely useful to a computer
+scientist. You will start by coding the Sieve of Eratosthenes and then show that all of the prime numbers
+you found satisfy Fermat’s little theorem up to certain values (all of this is explained below). You may only
+use techniques learned in class for the Python portion of this project. Read the whole assignment before
+starting. Do not skip parts, you must do the previous part before moving on.
+
+
+Part 1- The Sieve of Eratosthenes
+
+The Sieve of Eratosthenes is a method of finding prime numbers. We are going to look for prime numbers
+up to 1000. Consider the following procedure:
+1. Create a list of all integers from 0 to 1000. The index of your list should match the number inside.
+For example, if you make a list called mySieve, mySieve[n]=n for whichever all integers in the list (e.g.,
+mySieve[2]=2, mySieve[943]=943, etc.).
+2. Set all multiples of 2 in the list to 0 (except for 2 itself). Now you should have values such as
+mySieve[4]=0 and mySieve[806]=0. All multiples of 2 are gone, none of which were prime since they
+were divisible by 2.
+3. Go to the next non-zero number in the list (in this case 3) and set all multiples of it equal to zero
+(except itself). Now you have removed composite numbers divisible by 3. Your list should now start
+to look something like, [0,1,2,3,0,5,0,7,0,0,0,11,0,13,0,0,0,17,0,19,0,0,0,23...]. Note the absence of the
+multiples of 2 and 3.
+4. Go to the next non-zero number in the list and continue the process until you have only prime numbers
+remaining.
+
+
+P1- Assignment PART 1
+1. Code the Sieve of Eratosthenes for integers between 0 and 1000 as shown in the example above.
+2. Have your code print your list of prime numbers at the very end.
+"""
+
+#Example of the SieveOfEratosthenes below. DO NOT COPY PASTE THIS OR BASE YOUR CODE ON THIS
+#DON'T EVEN LOOK AT IT UNTIL YOU FINISH THE P1- Assignment PART 1.
+
+
+
+#THIS CODE IS ONLY A REFERENCE ON HOW THE SIEVE OF ERATOSTHENES WORKS FOR THE NEXT PART
+
+def SieveOfEratosthenes(num):
+    prime = [True for i in range(num+1)]
+    p = 2
+    while (p * p <= num):
+        # If prime[p] is not
+        # changed, then it is a prime
+        if (prime[p] == True):
+ 
+            # Updating all multiples of p
+            for i in range(p * p, num+1, p):
+                prime[i] = False
+        p += 1 
+    for p in range(2, num+1):
+        if prime[p]:
+            print(p)
+
+if __name__ == '__main__':
+    num = 30
+    print("Following are the prime numbers smaller"),
+    print("than or equal to", num)
+    SieveOfEratosthenes(num)
+    
+    
+"""
+P1- Assignment PART 2
+This time, you will code the sieve like in the code above. DO NOT COPY PASTE IT. But you can reference it.
+The way this code works is:
+	First, they create a list of consecutive integers from 2 through 30
+	Second, they let p equal 2, the smallest prime number
+	Third, they enumerate the multiples of p by counting in increments of p from 2*p to 30.
+	They then mark these numbers in the list. (These will be 2p, 3p, 4p, etc...). 
+	p itself should not be marked. 
+	After that, they find the smallest number in the list greater than p that is not marked.
+	If the number does not exist, the code stops. Otherwise the let p equal this new number (the next prime),
+	and repeat the process from the third step. 
+	When the code ends, the numbers remaining not marked in the list are all primes below 30
+	
+1. Code using the method above, but instead of using 30 use 1000, reference the code above if necessary
+but do not copy paste, rename variable, etc. It is noticeable if you do this. The goal of this is to understand
+how to code the Sieve of Eratosthenes since it will be used in the future. 
+"""
